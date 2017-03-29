@@ -46,17 +46,19 @@ public class CollectionOps {
     // Put your code for reverse here ...
     public static <T> List<T> reverse(List<T> l){
         //Collections.reverse(l); ??
-        for(int i = 0, j = l.size()-1;i<=(l.size()/2)-1;i++,j--) {
-            T temp = l.get(i);
-            l.set(i,l.get(j));
-            l.set(j,temp);
+        if(!l.isEmpty()) {
+            for (int i = 0, j = l.size() - 1; i <= (l.size() / 2) - 1; i++, j--) {
+                T temp = l.get(i);
+                l.set(i, l.get(j));
+                l.set(j, temp);
+            }
+            return l;
         }
-        return l;
+        return null;
     }
 
     // Put your code for less here ...
     public static <T> boolean less(Collection<T> c1, Collection<T> c2, Comparator<T> comp){
-
         Iterator collOneIterator = c1.iterator();
         Iterator collTwoIterator = c2.iterator();
 
