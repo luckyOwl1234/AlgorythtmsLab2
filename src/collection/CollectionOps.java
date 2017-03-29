@@ -15,19 +15,30 @@ public class CollectionOps {
 
         boolean ifFirst = true;
         boolean ifLast = false;
+        int counter = 0;
 
         Iterator collIterator = l.iterator();
 
         while(collIterator.hasNext()){
 
+            int size = l.size() - 1;
+            counter++;
+
             if(ifFirst){
-                System.out.print("[" + collIterator.next().toString() + ", ");
+                if (size == 0){
+                    System.out.print("[" + collIterator.next().toString() + "]");
+                }else {
+                    System.out.print("[" + collIterator.next().toString() + ", ");
+                }
                 ifFirst = false;
             } else if(ifLast){
                 System.out.print(collIterator.next().toString() + "]");
                 ifLast = false;
-            } else {
+            } else if (!ifFirst && !ifLast){
                 System.out.print(collIterator.next().toString() + ", ");
+                if(counter == size){
+                    ifLast = true;
+                }
             }
         }
     }
@@ -46,6 +57,7 @@ public class CollectionOps {
         while(collOneIterator.hasNext() && collTwoIterator.hasNext()){
 
         }
+        return false;
     }
     
     // Example
