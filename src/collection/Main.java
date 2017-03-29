@@ -1,8 +1,11 @@
 package collection;
 
 import java.util.*;
+import java.util.List;
 
 import collection.*;
+import com.sun.tools.javac.util.*;
+
 import static collection.CollectionOps.*; // Use static methods without the "Collection." prefix
 
 public class Main {
@@ -77,8 +80,23 @@ public class Main {
          System.out.println(CollectionOps.less(lindholmen1,lindholmen, stringComp));
 
          // Assignment 5: Write code to test map here
+
              
          // Assignment 5: Write code to test filter here
+         IsEven iE = new IsEven();
+         List<Integer> l1 = new ArrayList<>();
+         l1.add(3);
+         l1.add(-42);
+         l1.add(88);
+         l1.add(19);
+         l1.add(-37);
+         l1.add(0);
+         l1.add(18);
+
+         System.out.println(l1);
+         List<Integer> l2 = filter(iE, l1);
+         System.out.println(l2);
+
 
          /*ArrayList<Person> pl = new ArrayList<>();
          pl.add(new Person("Nisse","nisse@hipnet.moc","male",23));
