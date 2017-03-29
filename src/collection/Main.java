@@ -25,10 +25,15 @@ public class Main {
          // Test print for a list containing more than one elment
          names.add("b");
          names.add("c");
-         print(names); System.out.println();
+         names.add("d");
+         names.add("e");
+         names.add("f");
+         names.add("g");
+         print(names);
+         System.out.println();
          
          // Test the return value from reverse
-         //print(reverse(names));
+         print(reverse(names));
          System.out.println();
          // Test that reverse mutates its argument
          print(names);

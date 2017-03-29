@@ -10,7 +10,7 @@ import java.util.function.Function;
 
 public class CollectionOps {
 
-    // Put your code for print here ...
+    // uppgift 2
     public static <T> void print(Collection<T> l){
 
         boolean ifFirst = true;
@@ -43,10 +43,18 @@ public class CollectionOps {
         }
     }
 
-
-
-
     // Put your code for reverse here ...
+    public static <T> List<T> reverse(List<T> l){
+        //Collections.reverse(l); ??
+        int j = l.size()-1;
+        for(int i = 0;i<=(l.size()/2)-1;i++) {
+            T temp = l.get(i);
+            l.set(i,l.get(j));
+            l.set(j,temp);
+            j--;
+        }
+        return l;
+    }
 
     // Put your code for less here ...
     public static <T> boolean less(Collection<T> c1, Collection<T> c2, Comparator<T> comp){
