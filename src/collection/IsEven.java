@@ -9,8 +9,4 @@ public class IsEven implements Predicate {
 
         return (Integer)x % 2 == 0;
     }
-
-    public IsEven(Integer value){
-
-    }
 }

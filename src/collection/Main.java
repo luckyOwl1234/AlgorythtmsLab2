@@ -76,7 +76,6 @@ public class Main {
          System.out.println(CollectionOps.less(johanneberg,lindholmen, stringComp));
          System.out.println(CollectionOps.less(lindholmen1,lindholmen, stringComp));
 
-
          // Assignment 5: Write code to test map here
              
          // Assignment 5: Write code to test filter here

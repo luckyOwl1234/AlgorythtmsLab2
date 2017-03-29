@@ -83,10 +83,17 @@ public class CollectionOps {
     }
     
     // Put your code for filter here ...
-    public static <T> Collection<T> filter(Collection<T> l, ){
+    public static <T> Collection<T> filter(Predicate isEven, Collection<T> l){
+        Iterator<T> collIterator = l.iterator();
 
-
-
+        while(collIterator.hasNext()){
+            Object o1 = collIterator.next();
+            if(!isEven.test(o1)){
+                l.remove(o1);
+            }
+        }
+        
+        return l;
     }
 
 }
