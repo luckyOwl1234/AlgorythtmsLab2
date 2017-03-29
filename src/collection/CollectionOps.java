@@ -19,6 +19,10 @@ public class CollectionOps {
 
         Iterator collIterator = l.iterator();
 
+        if(l.isEmpty()){
+            System.out.print("[" + "]");
+        }
+
         while(collIterator.hasNext()){
 
             int size = l.size() - 1;
