@@ -83,5 +83,10 @@ public class CollectionOps {
     }
     
     // Put your code for filter here ...
+    public static <T> Collection<T> filter(Collection<T> l, ){
+
+
+
+    }
 
 }
