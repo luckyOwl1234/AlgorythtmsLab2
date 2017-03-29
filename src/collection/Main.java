@@ -16,7 +16,7 @@ public class Main {
          names.add("a");
          print(names); System.out.println();
 
-         // Test print for a list containing more than one elment
+         // Test print for a list containing more than one element
          names.add("b");
          names.add("c");
          /*names.add("d");
@@ -34,7 +34,6 @@ public class Main {
          System.out.println();
 
          // Assignment 4: Write code to test less here
-
          Comparator stringComp = (o1, o2) -> ((String) o1).compareTo((String) o2);
          Comparator integerComp = (o1, o2) -> ((Integer) o1).compareTo((Integer) o2);
 
