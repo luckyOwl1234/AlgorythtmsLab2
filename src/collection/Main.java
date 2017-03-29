@@ -1,12 +1,6 @@
 package collection;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.Arrays;
+import java.util.*;
 
 import collection.*;
 import static collection.CollectionOps.*; // Use static methods without the "Collection." prefix
@@ -39,7 +33,50 @@ public class Main {
          print(names);
          System.out.println();
 
-         // Assignment 4: Write code to test less here 
+         // Assignment 4: Write code to test less here
+
+         Comparator stringComp = (o1, o2) -> ((String) o1).compareTo((String) o2);
+         Comparator integerComp = (o1, o2) -> ((Integer) o1).compareTo((Integer) o2);
+
+         List<Integer> li1 = new LinkedList<>();
+         li1.add(4);
+         li1.add(2);
+         li1.add(5);
+         li1.add(1);
+         li1.add(3);
+
+         List<Integer> li2 = new LinkedList<>();
+         li2.add(8);
+         li2.add(6);
+         li2.add(7);
+         li2.add(9);
+
+         List<Integer> li3 = new LinkedList<>();
+         li3.add(97);
+         li3.add(5);
+         li3.add(123);
+         li3.add(18);
+
+         List<String> johanneberg = new LinkedList<>();
+         johanneberg.add("HC2");
+         johanneberg.add("ED");
+         johanneberg.add("HC3");
+
+         List<String> lindholmen = new LinkedList<>();
+         lindholmen.add("Saga");
+         lindholmen.add("Svea");
+         lindholmen.add("Jupiter");
+
+         List<String> lindholmen1 = new LinkedList<>();
+         lindholmen.add("Saga");
+         lindholmen.add("Svea");
+         lindholmen.add("Jupiter");
+
+         System.out.println(CollectionOps.less(li1,li2,integerComp));
+         System.out.println(CollectionOps.less(li1,li3,integerComp));
+         System.out.println(CollectionOps.less(johanneberg,lindholmen, stringComp));
+         System.out.println(CollectionOps.less(lindholmen1,lindholmen, stringComp));
+
 
          // Assignment 5: Write code to test map here
              
