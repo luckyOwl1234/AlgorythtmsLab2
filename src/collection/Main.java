@@ -74,12 +74,14 @@ public class Main {
          lindholmen.add("Svea");
          lindholmen.add("Jupiter");
 
-         System.out.println(CollectionOps.less(li1,li2,integerComp));
-         System.out.println(CollectionOps.less(li1,li3,integerComp));
-         System.out.println(CollectionOps.less(johanneberg,lindholmen, stringComp));
-         System.out.println(CollectionOps.less(lindholmen1,lindholmen, stringComp));
+         System.out.println(less(li1,li2,integerComp));
+         System.out.println(less(li1,li3,integerComp));
+         System.out.println(less(johanneberg,lindholmen, stringComp));
+         System.out.println(less(lindholmen1,lindholmen, stringComp));
 
          // Assignment 5: Write code to test map here
+
+
 
              
          // Assignment 5: Write code to test filter here
@@ -93,9 +95,14 @@ public class Main {
          l1.add(0);
          l1.add(18);
 
-         System.out.println(l1);
+
+         System.out.println("\nUnchanged List");
+         print(l1);
+         System.out.println("\nChanged List");
          List<Integer> l2 = filter(iE, l1);
-         System.out.println(l2);
+         print(l2);
+
+
 
 
          /*ArrayList<Person> pl = new ArrayList<>();
