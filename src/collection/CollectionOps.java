@@ -46,12 +46,10 @@ public class CollectionOps {
     // Put your code for reverse here ...
     public static <T> List<T> reverse(List<T> l){
         //Collections.reverse(l); ??
-        int j = l.size()-1;
-        for(int i = 0;i<=(l.size()/2)-1;i++) {
+        for(int i = 0, j = l.size()-1;i<=(l.size()/2)-1;i++,j--) {
             T temp = l.get(i);
             l.set(i,l.get(j));
             l.set(j,temp);
-            j--;
         }
         return l;
     }

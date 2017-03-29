@@ -25,10 +25,10 @@ public class Main {
          // Test print for a list containing more than one elment
          names.add("b");
          names.add("c");
-         names.add("d");
+         /*names.add("d");
          names.add("e");
          names.add("f");
-         names.add("g");
+         names.add("g");*/
          print(names);
          System.out.println();
          
