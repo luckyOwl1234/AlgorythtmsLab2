@@ -1,7 +1,6 @@
 package collection;
 
 import java.util.*;
-import java.util.function.Function;
 
 public class CollectionOps {
 
@@ -21,13 +20,13 @@ public class CollectionOps {
 
             if(ifFirst){
                 if (size == 0){
-                    System.out.print("[" + collIterator.next().toString() + "]");
+                    System.out.print("[" + collIterator.next().toString() + "]\n");
                 }else {
                     System.out.print("[" + collIterator.next().toString() + ", ");
                 }
                 ifFirst = false;
             } else if(ifLast){
-                System.out.print(collIterator.next().toString() + "]");
+                System.out.print(collIterator.next().toString() + "]\n");
                 ifLast = false;
             } else if (!ifFirst && !ifLast){
                 System.out.print(collIterator.next().toString() + ", ");
@@ -83,17 +82,25 @@ public class CollectionOps {
     }
     
     // Put your code for filter here ...
-    public static <T> List<T> filter (Predicate isEven, List<T> l) {
-        Iterator<T> collIterator = l.iterator();
+    public static <T> Collection<T> filter (Predicate isEven, Collection<T> l) {
 
-        while(collIterator.hasNext()){
-            T o1 = collIterator.next();
-            if(!isEven.test(o1)){
-                collIterator.remove();
+        // Determine the dynamic type of the collection
+        Class<? extends Collection> cls = l.getClass();
+        try {
+            // Create an object of the same dynamic type as c
+            Collection<T> result = (Collection<T>)cls.newInstance();
+            // type.cast(type.newInstance());
+            // Copy the elements and apply op to them
+            for ( T x : l ) {
+                if (isEven.test(x))
+                    result.add(x);
             }
+            return result;
         }
-
-        return l;
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }
