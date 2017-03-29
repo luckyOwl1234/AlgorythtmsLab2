@@ -1,6 +1,11 @@
 package collection;
 
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.function.Function;
 
 public class CollectionOps {
@@ -50,15 +55,14 @@ public class CollectionOps {
     }
 
     // Put your code for less here ...
-    public static <T> boolean less(Collection<T> c1, Collection<T> c2, Comparator<T> comp) {
+    public static <T> boolean less(Collection<T> c1, Collection<T> c2, Comparator<T> comp){
 
-    try {
-        if (comp.compare(Collections.max(c1, comp), Collections.min(c2, comp)) < 0){
-            return true;
+        Iterator collOneIterator = c1.iterator();
+        Iterator collTwoIterator = c2.iterator();
+
+        while(collOneIterator.hasNext() && collTwoIterator.hasNext()){
+
         }
-    }catch (NoSuchElementException e){
-        return false;
-    }
         return false;
     }
     
