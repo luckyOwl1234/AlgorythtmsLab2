@@ -27,4 +27,5 @@ delbart med 2 om det är det så läggs det in i en ny samling som sedan returne
 
 Uppgift 6
 Print får som parameter samlingen som map returnerar.
-Map tar in  
+Map tar in getEmail från Person, och samlingen som filter returnerar efter att ha filtrerat
+listan pl med ålder över 65, och könet kvinna.

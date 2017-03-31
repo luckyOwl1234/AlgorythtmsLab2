@@ -103,7 +103,6 @@ public class Main {
         
          // Assignment 6: Write code using lambdas here
          print(map((o1) -> o1.getEmail(), filter((o2) -> o2.getAge() > 65 && o2.getGender().equals("female"), pl)));
-
     }
 }
 
