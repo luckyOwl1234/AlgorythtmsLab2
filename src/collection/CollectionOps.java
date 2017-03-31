@@ -6,35 +6,13 @@ public class CollectionOps {
 
     // uppgift 2
     public static <T> void print(Collection<T> l){
+        ArrayList arrList = new ArrayList();
 
-        boolean ifFirst = true;
-        boolean ifLast = false;
-        int counter = 0;
-
-        Iterator collIterator = l.iterator();
-
-        while(collIterator.hasNext()){
-
-            int size = l.size() - 1;
-            counter++;
-
-            if(ifFirst){
-                if (size == 0){
-                    System.out.print("[" + collIterator.next().toString() + "]\n");
-                }else {
-                    System.out.print("[" + collIterator.next().toString() + ", ");
-                }
-                ifFirst = false;
-            } else if(ifLast){
-                System.out.print(collIterator.next().toString() + "]\n");
-                ifLast = false;
-            } else if (!ifFirst && !ifLast){
-                System.out.print(collIterator.next().toString() + ", ");
-                if(counter == size){
-                    ifLast = true;
-                }
-            }
+        for(T temp: l){
+            arrList.add(temp.toString());
         }
+
+        System.out.println(arrList);
     }
 
     // Put your code for reverse here ...
@@ -82,7 +60,7 @@ public class CollectionOps {
     }
     
     // Put your code for filter here ...
-    public static <T> Collection<T> filter (Predicate isEven, Collection<T> l) {
+    public static <T> Collection<T> filter (Predicate<T> isEven, Collection<T> l) {
 
         // Determine the dynamic type of the collection
         Class<? extends Collection> cls = l.getClass();
