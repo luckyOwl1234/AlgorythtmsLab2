@@ -6,7 +6,7 @@ public class CollectionOps {
 
     // uppgift 2
     public static <T> void print(Collection<T> l){
-        ArrayList arrList = new ArrayList();
+        ArrayList<String> arrList = new ArrayList<>();
 
         for(T temp: l){
             arrList.add(temp.toString());
